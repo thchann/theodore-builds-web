@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import lynkImage from "@/assets/lynk.png";
 import classSenseImage from "@/assets/class-sense.jpg";
 import revelImage from "@/assets/revel.jpg";
+import neurochainImage from "@/assets/neurochain.jpg";
 
 const Index = () => {
   return (
@@ -142,6 +143,7 @@ const Index = () => {
                 <ProjectCard
                   title="NeuroChain"
                   description="Educational machine learning framework bridging classical algorithms and modern deep learning, illustrating the path from perceptrons to GPT-style architectures."
+                  image={neurochainImage}
                   link="https://github.com/thchann/NeuroChain"
                 />
                 <a
