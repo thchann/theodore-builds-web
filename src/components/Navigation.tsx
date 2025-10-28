@@ -46,24 +46,13 @@ export const Navigation = () => {
                 activeSection === item.id ? "active" : ""
               }`}
             >
-              <div className="flex items-center gap-3">
-                <span
-                  className={`font-mono text-xs font-bold transition-all ${
-                    activeSection === item.id
-                      ? "text-cyan scale-110"
-                      : "text-slate group-hover:text-cyan group-hover:scale-105"
-                  }`}
-                >
-                  {item.number}
-                </span>
-                <div
-                  className={`h-2 w-2 rounded-full transition-all ${
-                    activeSection === item.id
-                      ? "bg-cyan shadow-[0_0_8px_hsl(var(--cyan))] scale-125"
-                      : "bg-navy-lighter group-hover:bg-slate group-hover:scale-110"
-                  }`}
-                />
-              </div>
+              <div
+                className={`h-2 w-2 rounded-full transition-all ${
+                  activeSection === item.id
+                    ? "bg-cyan shadow-[0_0_8px_hsl(var(--cyan))] scale-125"
+                    : "bg-navy-lighter group-hover:bg-slate group-hover:scale-110"
+                }`}
+              />
               <span
                 className={`text-xs uppercase tracking-widest font-bold transition-colors ${
                   activeSection === item.id
