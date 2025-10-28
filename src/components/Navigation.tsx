@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
+  { id: "about", label: "About", number: "01" },
+  { id: "experience", label: "Experience", number: "02" },
+  { id: "projects", label: "Projects", number: "03" },
 ];
 
 export const Navigation = () => {
@@ -37,7 +37,7 @@ export const Navigation = () => {
 
   return (
     <nav className="hidden lg:block">
-      <ul className="space-y-4">
+      <ul className="space-y-6">
         {navItems.map((item) => (
           <li key={item.id}>
             <button
@@ -46,17 +46,28 @@ export const Navigation = () => {
                 activeSection === item.id ? "active" : ""
               }`}
             >
-              <span
-                className={`h-px transition-all ${
-                  activeSection === item.id
-                    ? "w-16 bg-cyan"
-                    : "w-8 bg-slate group-hover:w-16 group-hover:bg-slate-light"
-                }`}
-              />
+              <div className="flex items-center gap-3">
+                <span
+                  className={`font-mono text-xs font-bold transition-all ${
+                    activeSection === item.id
+                      ? "text-cyan scale-110"
+                      : "text-slate group-hover:text-cyan group-hover:scale-105"
+                  }`}
+                >
+                  {item.number}
+                </span>
+                <div
+                  className={`h-2 w-2 rounded-full transition-all ${
+                    activeSection === item.id
+                      ? "bg-cyan shadow-[0_0_8px_hsl(var(--cyan))] scale-125"
+                      : "bg-navy-lighter group-hover:bg-slate group-hover:scale-110"
+                  }`}
+                />
+              </div>
               <span
                 className={`text-xs uppercase tracking-widest font-bold transition-colors ${
                   activeSection === item.id
-                    ? "text-cyan"
+                    ? "text-slate-lighter"
                     : "text-slate group-hover:text-slate-light"
                 }`}
               >
