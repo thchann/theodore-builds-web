@@ -20,7 +20,7 @@ const socialLinks = [
 
 export const SocialLinks = () => {
   return (
-    <div className="flex gap-6 mt-8">
+    <div className="flex gap-6 mt-6">
       {socialLinks.map((link) => {
         const Icon = link.icon;
         return (
